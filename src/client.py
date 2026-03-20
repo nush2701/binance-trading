@@ -1,4 +1,5 @@
 import os
+from typing import Optional
 from binance.client import Client
 from .logging_config import setup_logger
 
@@ -23,7 +24,31 @@ class BinanceFuturesClient:
     def get_futures_balance(self):
         """Retrieve the futures account balance."""
         try:
-            return self.client.futures_account_balance()
+            logger.info("API Request: fetching futures account balance")
+            response = self.client.futures_account_balance()
+            logger.info("API Response: fetched balance successfully")
+            return response
         except Exception as e:
-            logger.error(f"Error fetching futures balance: {e}")
+            logger.error(f"API Error fetching futures balance: {e}")
+            raise
+
+    def place_order(self, symbol: str, side: str, order_type: str, quantity: float, price: Optional[float] = None):
+        """Place an order and log the request/response."""
+        try:
+            params = {
+                'symbol': symbol,
+                'side': side,
+                'type': order_type,
+                'quantity': quantity
+            }
+            if order_type == 'LIMIT' and price is not None:
+                params['timeInForce'] = 'GTC'
+                params['price'] = price
+                
+            logger.info(f"API Request (futures_create_order) | Params: {params}")
+            response = self.client.futures_create_order(**params)
+            logger.info(f"API Response: Order ID {response.get('orderId')} | Status {response.get('status')}")
+            return response
+        except Exception as e:
+            logger.error(f"API Error placing order: {e}")
             raise

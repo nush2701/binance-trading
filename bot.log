@@ -1,0 +1,14 @@
+2026-03-20 12:17:27,591 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:17:27,594 - src.orders - INFO - Placing MARKET BUY order for 0.001 BTCUSDT
+2026-03-20 12:17:27,595 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.001}
+2026-03-20 12:17:28,550 - src.client - ERROR - API Error placing order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:17:28,552 - src.orders - ERROR - Failed to place market order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:17:28,553 - cli - ERROR - Execution failed: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:17:51,466 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:17:51,468 - src.orders - INFO - Placing MARKET BUY order for 0.002 BTCUSDT
+2026-03-20 12:17:51,468 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-03-20 12:17:52,298 - src.client - INFO - API Response: Order ID 12893481314 | Status NEW
+2026-03-20 12:21:40,827 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:21:40,837 - src.orders - INFO - Placing MARKET BUY order for 0.002 BTCUSDT
+2026-03-20 12:21:40,839 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
+2026-03-20 12:21:41,862 - src.client - INFO - API Response: Order ID 12893532062 | Status NEW

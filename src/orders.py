@@ -17,13 +17,12 @@ class OrderManager:
             
         logger.info(f"Placing MARKET {side} order for {quantity} {symbol}")
         try:
-            response = self.client.client.futures_create_order(
+            response = self.client.place_order(
                 symbol=symbol,
                 side=side,
-                type=ORDER_TYPE_MARKET,
+                order_type=ORDER_TYPE_MARKET,
                 quantity=quantity
             )
-            logger.info(f"Market order successful: Order ID {response.get('orderId')}")
             return response
         except Exception as e:
             logger.error(f"Failed to place market order: {e}")
@@ -36,15 +35,13 @@ class OrderManager:
             
         logger.info(f"Placing LIMIT {side} order for {quantity} {symbol} at price {price}")
         try:
-            response = self.client.client.futures_create_order(
+            response = self.client.place_order(
                 symbol=symbol,
                 side=side,
-                type=ORDER_TYPE_LIMIT,
-                timeInForce='GTC',
+                order_type=ORDER_TYPE_LIMIT,
                 quantity=quantity,
                 price=price
             )
-            logger.info(f"Limit order successful: Order ID {response.get('orderId')}")
             return response
         except Exception as e:
             logger.error(f"Failed to place limit order: {e}")

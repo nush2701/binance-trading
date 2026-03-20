@@ -35,12 +35,31 @@ def main():
         client = BinanceFuturesClient(testnet=testnet)
         order_manager = OrderManager(client)
         
+        print("\n--- Order Summary ---")
+        print(f"Symbol:   {args.symbol}")
+        print(f"Side:     {args.side}")
+        print(f"Type:     {args.type}")
+        print(f"Quantity: {args.quantity}")
+        if args.type == 'LIMIT':
+            print(f"Price:    {args.price}")
+        print("---------------------\n")
+        
         if args.type == 'MARKET':
-            order_manager.place_market_order(args.symbol, args.side, args.quantity)
+            response = order_manager.place_market_order(args.symbol, args.side, args.quantity)
         elif args.type == 'LIMIT':
-            order_manager.place_limit_order(args.symbol, args.side, args.quantity, args.price)
+            response = order_manager.place_limit_order(args.symbol, args.side, args.quantity, args.price)
+        else:
+            response = None
+            
+        if response:
+            print("\n✅ Order Executed Successfully!")
+            print(f"Order ID:          {response.get('orderId')}")
+            print(f"Status:            {response.get('status')}")
+            print(f"Executed Quantity: {response.get('executedQty')}")
+            print(f"Average Price:     {response.get('avgPrice', response.get('price'))}")
             
     except Exception as e:
+        print(f"\n❌ Error: {e}")
         logger.error(f"Execution failed: {e}")
         sys.exit(1)
 

@@ -8,12 +8,18 @@ def setup_logger(name="binance_bot"):
     # Avoid adding handlers multiple times
     if not logger.handlers:
         logger.setLevel(logging.INFO)
-        handler = logging.StreamHandler(sys.stdout)
-        
         formatter = logging.Formatter(
             '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
         )
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
+        
+        # Console handler
+        console_handler = logging.StreamHandler(sys.stdout)
+        console_handler.setFormatter(formatter)
+        logger.addHandler(console_handler)
+        
+        # File handler
+        file_handler = logging.FileHandler("bot.log")
+        file_handler.setFormatter(formatter)
+        logger.addHandler(file_handler)
         
     return logger
