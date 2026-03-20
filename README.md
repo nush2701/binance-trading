@@ -127,5 +127,5 @@ Avg Price:    2500.50
 
 To ensure completely transparent operations, the bot logs events utilizing the Python `logging` library. 
 
-- **Console Output**: A concise stream of high-level statuses.
-- **File Output (`bot.log`)**: Detailed traces, including raw API request bodies, direct API responses from Binance, explicit execution timestamps, and comprehensive error outputs if a trade fails.
+- **Console Output**: A concise visual stream of high-level statuses, order summaries, and execution results.
+- **File Output (`bot.log`)**: Detailed UTF-8 encoded traces. This includes the complete CLI order summary (for both `MARKET` and `LIMIT` orders), explicit execution symbols (`✅`/`❌`), raw API request bodies, direct API responses from Binance, explicit execution timestamps, and comprehensive error outputs if a trade fails.

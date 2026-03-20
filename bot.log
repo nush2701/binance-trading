@@ -12,3 +12,82 @@
 2026-03-20 12:21:40,837 - src.orders - INFO - Placing MARKET BUY order for 0.002 BTCUSDT
 2026-03-20 12:21:40,839 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'MARKET', 'quantity': 0.002}
 2026-03-20 12:21:41,862 - src.client - INFO - API Response: Order ID 12893532062 | Status NEW
+2026-03-20 12:35:48,231 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:35:48,237 - src.orders - INFO - Placing LIMIT BUY order for 0.002 BTCUSDT at price 30000.0
+2026-03-20 12:35:48,239 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.002, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 12:35:49,626 - src.client - ERROR - API Error placing order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:35:49,627 - src.orders - ERROR - Failed to place limit order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:35:49,629 - cli - ERROR - Execution failed: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:40:37,427 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:40:37,430 - src.orders - INFO - Placing LIMIT BUY order for 0.002 BTCUSDT at price 30000.0
+2026-03-20 12:40:37,432 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.002, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 12:40:39,148 - src.client - ERROR - API Error placing order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:40:39,149 - src.orders - ERROR - Failed to place limit order: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:40:39,150 - cli - ERROR - Execution failed: APIError(code=-4164): Order's notional must be no smaller than 100 (unless you choose reduce only).
+2026-03-20 12:40:54,310 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:40:54,315 - src.orders - INFO - Placing LIMIT BUY order for 0.01 BTCUSDT at price 30000.0
+2026-03-20 12:40:54,316 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 12:40:56,103 - src.client - INFO - API Response: Order ID 12893780192 | Status NEW
+2026-03-20 12:43:03,914 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:43:03,916 - cli - INFO - --- Order Summary ---
+2026-03-20 12:43:03,916 - cli - INFO - Symbol:   BTCUSDT
+2026-03-20 12:43:03,917 - cli - INFO - Side:     BUY
+2026-03-20 12:43:03,918 - cli - INFO - Type:     LIMIT
+2026-03-20 12:43:03,918 - cli - INFO - Quantity: 0.01
+2026-03-20 12:43:03,919 - cli - INFO - Price:    30000.0
+2026-03-20 12:43:03,919 - cli - INFO - ---------------------
+2026-03-20 12:43:03,920 - src.orders - INFO - Placing LIMIT BUY order for 0.01 BTCUSDT at price 30000.0
+2026-03-20 12:43:03,921 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 12:43:05,253 - src.client - INFO - API Response: Order ID 12893808436 | Status NEW
+2026-03-20 12:43:05,286 - cli - INFO - Order ID:          12893808436
+2026-03-20 12:43:05,288 - cli - INFO - Status:            NEW
+2026-03-20 12:43:05,288 - cli - INFO - Executed Quantity: 0.000
+2026-03-20 12:43:05,289 - cli - INFO - Average Price:     0.00
+2026-03-20 12:44:05,157 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 12:44:05,159 - cli - INFO - --- Order Summary ---
+2026-03-20 12:44:05,161 - cli - INFO - Symbol:   BTCUSDT
+2026-03-20 12:44:05,161 - cli - INFO - Side:     BUY
+2026-03-20 12:44:05,161 - cli - INFO - Type:     LIMIT
+2026-03-20 12:44:05,162 - cli - INFO - Quantity: 0.01
+2026-03-20 12:44:05,162 - cli - INFO - Price:    30000.0
+2026-03-20 12:44:05,163 - cli - INFO - ---------------------
+2026-03-20 12:44:05,163 - src.orders - INFO - Placing LIMIT BUY order for 0.01 BTCUSDT at price 30000.0
+2026-03-20 12:44:05,164 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 12:44:06,377 - src.client - INFO - API Response: Order ID 12893823957 | Status NEW
+2026-03-20 12:44:06,377 - cli - INFO - ✅ Order Executed Successfully!
+2026-03-20 12:44:06,378 - cli - INFO - Order ID:          12893823957
+2026-03-20 12:44:06,378 - cli - INFO - Status:            NEW
+2026-03-20 12:44:06,379 - cli - INFO - Executed Quantity: 0.000
+2026-03-20 12:44:06,379 - cli - INFO - Average Price:     0.00
+2026-03-20 13:13:54,077 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 13:13:54,077 - cli - INFO - --- Order Summary ---
+2026-03-20 13:13:54,078 - cli - INFO - Symbol:   BTCUSDT
+2026-03-20 13:13:54,078 - cli - INFO - Side:     BUY
+2026-03-20 13:13:54,078 - cli - INFO - Type:     LIMIT
+2026-03-20 13:13:54,079 - cli - INFO - Quantity: 0.01
+2026-03-20 13:13:54,079 - cli - INFO - Price:    30000.0
+2026-03-20 13:13:54,079 - cli - INFO - ---------------------
+2026-03-20 13:13:54,079 - src.orders - INFO - Placing LIMIT BUY order for 0.01 BTCUSDT at price 30000.0
+2026-03-20 13:13:54,080 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 13:13:55,534 - src.client - INFO - API Response: Order ID 12894197933 | Status NEW
+2026-03-20 13:13:55,535 - cli - INFO - ✅ Order Executed Successfully!
+2026-03-20 13:13:55,536 - cli - INFO - Order ID:          12894197933
+2026-03-20 13:13:55,536 - cli - INFO - Status:            NEW
+2026-03-20 13:13:55,537 - cli - INFO - Executed Quantity: 0.000
+2026-03-20 13:13:55,537 - cli - INFO - Average Price:     0.00
+2026-03-20 13:14:48,115 - src.client - INFO - Initialized Binance Client (Testnet: True)
+2026-03-20 13:14:48,116 - cli - INFO - --- Order Summary ---
+2026-03-20 13:14:48,117 - cli - INFO - Symbol:   BTCUSDT
+2026-03-20 13:14:48,118 - cli - INFO - Side:     BUY
+2026-03-20 13:14:48,118 - cli - INFO - Type:     LIMIT
+2026-03-20 13:14:48,119 - cli - INFO - Quantity: 0.01
+2026-03-20 13:14:48,124 - cli - INFO - Price:    30000.0
+2026-03-20 13:14:48,128 - cli - INFO - ---------------------
+2026-03-20 13:14:48,129 - src.orders - INFO - Placing LIMIT BUY order for 0.01 BTCUSDT at price 30000.0
+2026-03-20 13:14:48,130 - src.client - INFO - API Request (futures_create_order) | Params: {'symbol': 'BTCUSDT', 'side': 'BUY', 'type': 'LIMIT', 'quantity': 0.01, 'timeInForce': 'GTC', 'price': 30000.0}
+2026-03-20 13:14:49,142 - src.client - INFO - API Response: Order ID 12894208464 | Status NEW
+2026-03-20 13:14:49,143 - cli - INFO - ✅ Order Executed Successfully!
+2026-03-20 13:14:49,144 - cli - INFO - Order ID:          12894208464
+2026-03-20 13:14:49,145 - cli - INFO - Status:            NEW
+2026-03-20 13:14:49,146 - cli - INFO - Executed Quantity: 0.000
+2026-03-20 13:14:49,146 - cli - INFO - Average Price:     0.00

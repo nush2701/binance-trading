@@ -35,14 +35,14 @@ def main():
         client = BinanceFuturesClient(testnet=testnet)
         order_manager = OrderManager(client)
         
-        print("\n--- Order Summary ---")
-        print(f"Symbol:   {args.symbol}")
-        print(f"Side:     {args.side}")
-        print(f"Type:     {args.type}")
-        print(f"Quantity: {args.quantity}")
+        logger.info("--- Order Summary ---")
+        logger.info(f"Symbol:   {args.symbol}")
+        logger.info(f"Side:     {args.side}")
+        logger.info(f"Type:     {args.type}")
+        logger.info(f"Quantity: {args.quantity}")
         if args.type == 'LIMIT':
-            print(f"Price:    {args.price}")
-        print("---------------------\n")
+            logger.info(f"Price:    {args.price}")
+        logger.info("---------------------")
         
         if args.type == 'MARKET':
             response = order_manager.place_market_order(args.symbol, args.side, args.quantity)
@@ -52,11 +52,11 @@ def main():
             response = None
             
         if response:
-            print("\n✅ Order Executed Successfully!")
-            print(f"Order ID:          {response.get('orderId')}")
-            print(f"Status:            {response.get('status')}")
-            print(f"Executed Quantity: {response.get('executedQty')}")
-            print(f"Average Price:     {response.get('avgPrice', response.get('price'))}")
+            logger.info("✅ Order Executed Successfully!")
+            logger.info(f"Order ID:          {response.get('orderId')}")
+            logger.info(f"Status:            {response.get('status')}")
+            logger.info(f"Executed Quantity: {response.get('executedQty')}")
+            logger.info(f"Average Price:     {response.get('avgPrice', response.get('price'))}")
             
     except Exception as e:
         print(f"\n❌ Error: {e}")
